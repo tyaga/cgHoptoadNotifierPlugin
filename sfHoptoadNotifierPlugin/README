@@ -1,0 +1,17 @@
+= cgHoptoad Plugin =
+
+Author: Chris Gratigny <chrisg@ibethel.org>
+Date: October 27, 2010
+
+This plugin uses version 2.0 (xml) of the Hoptoad API, and was based on a php notifier by Rich Cavanaugh
+
+The plugin handles exceptions, errors, and fatal errors.
+- Fatal Errors will be reported with "Fatal Error: " prepended to the error
+- Exceptions will be reported with "Uncaught Exception: " prepended to the error
+- Errors will be reported just as they appear 
+
+This has two settings
+- hoptoad_disabled: 
+	can be set to true to disable the filter. it is recommended that it is disabled for dev / test
+- hoptoad_api_key: 
+	is the key from hoptoad. 

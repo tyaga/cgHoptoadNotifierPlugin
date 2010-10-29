@@ -1,0 +1,14 @@
+# this has two settings
+# - hoptoad_disabled can be set to true to disable the filter. it is recommended that it is disabled for dev
+# - hoptoad_api_key is the key from hoptoad
+dev:
+  .settings:
+    hoptoad_disabled: true
+
+test:
+  .settings:
+    hoptoad_disabled: true
+
+all:
+  .settings:
+    hoptoad_api_key:  891c0df3d0b8da02002b2b7e875cecec
