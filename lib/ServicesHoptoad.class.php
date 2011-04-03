@@ -245,7 +245,7 @@ class ServicesHoptoad
         $this->addXmlBacktrace($error);
         
         $request = $doc->addChild('request');
-        @$request->addChild('url', $this->request_uri());
+        @$request->addChild('url', str_replace('&', '', $this->request_uri()));
         $request->addChild('component', $this->component());
         $request->addChild('action', $this->action());
         
@@ -272,7 +272,7 @@ class ServicesHoptoad
         $node = $parent->addChild($key);
         foreach ($source as $key=>$val)
         {
-            @$var_node = $node->addChild('var', (string) $val);
+            @$var_node = $node->addChild('var', str_replace('&', '', (string) $val));
             $var_node->addAttribute('key', $key);
         }
     }
